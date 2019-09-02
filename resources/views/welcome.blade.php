@@ -11,6 +11,7 @@
         <style>
             body,html {
                 font-family: roboto;
+                background-color: white;
             }
         </style>
     </head>

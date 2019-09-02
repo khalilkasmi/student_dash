@@ -1,13 +1,13 @@
 <template>
 
         <div>
-            <div class="d-inline-block  deep-purple accent-4 white--text">
+            <div class="d-inline-block  ">
                 <v-card
                     height="100%"
                     width="256"
                     class="mx-auto"
                 >
-                    <v-navigation-drawer  permanent fixed >
+                    <v-navigation-drawer expandOnHover=true permanent fixed >
                         <v-list-item>
 
 
@@ -63,7 +63,8 @@
                     </v-navigation-drawer>
                 </v-card>
             </div>
-            <div class="d-inline-block ma-2  black white--text">
+            <v-flex
+            <div class="ma-2 mx-auto ">
                 <router-view></router-view>
             </div>
         </div>
@@ -95,7 +96,7 @@ export default {
             title: 'welcome back '+ this.$store.getters.getUser.user.name.toLowerCase(),
             showConfirmButton: false,
             customClass: 'swal-wide',
-            timer: 5000,
+            timer: 1500,
             toast: true
         })
     }

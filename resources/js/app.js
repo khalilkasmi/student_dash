@@ -51,6 +51,7 @@ export default new Vuetify({ })
 const store = new Vuex.Store({
     state: {
         user: {},
+        level: {},
         token: '',
         isSignedIn: false,
     },
@@ -78,7 +79,10 @@ const store = new Vuex.Store({
             return state.user
         },
         getToken(state){
-            return state.toke
+            return state.token
+        },
+        getLevel(state){
+            return state.level
         }
     },
     plugins: [createPersistedState()],

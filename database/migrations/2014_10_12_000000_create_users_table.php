@@ -20,6 +20,12 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->string('avatar');
+            $table->unsignedBigInteger('level_id')->nullable();
+            $table->foreign('level_id')->references('id')->on('levels');
+            $table->string('major')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->string('cne')->nullable();
+            $table->string('cin')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

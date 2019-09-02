@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Level;
 use App\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -75,11 +76,8 @@ class AuthController extends Controller
       $user->save();
     }
 
-    $user_data = [
-      'user_name'=> $user->name,
-      'user_email'=> $user->email,
-      'user_avatar'=> $user->avatar,
-    ];
+
+
 
     $token = JWTAuth::fromUser($user);
 

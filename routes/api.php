@@ -30,3 +30,9 @@ Route::get('triggerLogin',function (){
     $uri = ' https://accounts.google.com/o/oauth2/auth?client_id=553768821696-j4nl52epir2atmhcah2arsu10n1ngace.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fcallback%2Fgoogle&scope=openid+profile+email&response_type=code';
     return $uri;
 });
+
+Route::middleware('jwt.auth')->group(function () {
+    Route::get('/user/{user_email}','studentController@getUser');
+    Route::get('/modules/{user}','studentController@student_modules');
+    Route::get('/user/{id}/level','studentController@getLevel');
+});

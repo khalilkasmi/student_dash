@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="v-app">
       <div>
           <login v-if="!islogedin"></login>
           <div v-else>
@@ -30,3 +30,9 @@
         }
     }
 </script>
+
+<style>
+    #v-app{
+        background-color: white ;
+    }
+</style>

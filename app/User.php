@@ -53,4 +53,11 @@ class User extends Authenticatable implements JWTSubject
             $this->attributes['password'] = bcrypt($password);
         }
     }
+
+    public function level()
+    {
+        return $this->hasOne(Level::class);
+    }
+
+
 }
